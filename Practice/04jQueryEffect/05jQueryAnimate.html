@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Animate</title>
+  </head>
+  <!-- Adding jQuery To HTMl -->
+  <script
+    src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- CSS style  -->
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: crimson;
+      color: white;
+    }
+  </style>
+  <body>
+    <h2>jQuery Animate</h2>
+    <p>
+      The jQuery animate() method provides you a way to create custom
+      animations.
+    </p>
+    <h2>Syntax</h2>
+    <pre>
+        $(selector).animate({params}, speed, callback);  
+    </pre>
+    <ul>
+      <li>params parameter defines the CSS properties to be animated.</li>
+    </ul>
+    <hr />
+    <div class="box">Hello Dost</div>
+    <hr />
+    <button class="animate">Animate</button>
+    <script>
+      $(function () {
+        $(".animate").click(function () {
+          $(".box").animate(
+            {
+              marginLeft: "100px",
+              opacity: "0.5",
+            },
+            1000
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

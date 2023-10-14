@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Slide</title>
+    <!-- Adding jQuery To HTMl -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Css style  -->
+    <style>
+      #slideDown {
+        background-color: teal;
+        color: khaki;
+        display: none;
+        padding: 100px;
+      }
+      #slideUp {
+        background-color: rgb(70, 5, 252);
+        color: rgb(231, 229, 219);
+        padding: 100px;
+      }
+      #slideToogle {
+        background-color: rgb(240, 52, 4);
+        color: rgb(240, 237, 216);
+        padding: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Slide</h1>
+    
+    <hr />
+    <h2>Syntax</h2>
+    <hr />
+    <pre>
+        $(selector).slideDown(speed);  
+        $(selector).slideDown(speed, callback);   
+        $(selector).slideDown(speed, easing, callback);  
+    </pre>
+    <hr />
+    <h2 class="handleSlideDown">Slide Down</h2>
+    <p  id="slideDown">
+      Hey I'm Slide Function in jQuery. You Can Use me for Slide .
+    </p>
+    <hr>
+    <pre>
+        $(selector).slideUp(speed);  
+        $(selector).slideUp(speed, callback);   
+        $(selector).slideUp(speed, easing, callback);  
+    </pre>
+    <hr />
+    <h2 class="handleSlideUp">Slide Up</h2>
+    <p id="slideUp">
+      Hey I'm Slide Up Function in jQuery. You Can Use me for Slide Up.
+    </p>
+    <hr />
+    <pre>
+        $(selector).slideToggle(speed);  
+        $(selector).slideToggle(speed, callback);   
+        $(selector).slideToggle(speed, easing, callback);  
+    </pre>
+    <hr />
+    <h2 class="handleSlideToggle">Slide Toggle</h2>
+    <p  id="slideToogle">
+      Hey I'm Slide Toggle Function in jQuery. You Can Use me for Slide Toggle.
+    </p>
+    <hr />
+    <script>
+      $(function () {
+        $(".handleSlideDown").click(function () {
+          $("#slideDown").slideDown(2000);
+        });
+        $(".handleSlideUp").click(function () {
+          $("#slideUp").slideUp(2000);
+        });
+        $(".handleSlideToggle").click(function () {
+          $("#slideToogle").slideToggle(2000);
+        });
+      });
+    </script>
+  </body>
+</html>

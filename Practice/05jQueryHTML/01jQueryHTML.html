@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery HTML</title>
+    <!-- Adding jQuery To HTMl -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS style  -->
+    <style>
+      .box {
+        background-color: teal;
+        color: khaki;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery HTML</h1>
+    <p>
+      jQuery html() method is used to change the entire content of the selected
+      elements. It replaces the selected element content with new contents.
+    </p>
+    <h2>Syntax</h2>
+    <pre>$(selector).html()</pre>
+    <p>It is used to return content</p>
+    <hr />
+    <pre>$(selector).html(content)</pre>
+    <p>It is used to set content</p>
+    <hr />
+    <pre>$(selector).html(function (index, currentcontent))  </pre>
+    <p>It is used to set content by calling function.</p>
+    <hr />
+    <div class="box">Hello Dost</div>
+    <hr />
+    <button id="handleHtml">Click To Change Box Color</button>
+    <button id="handleHtmlReturn">Click To Change Box Color</button>
+    <button id="handleFunction">Click To convert HTML To text</button>
+    <script>
+      // first method
+
+      $(function () {
+        $("#handleHtml").click(function () {
+          $(".box").html("Yes You Clicked on Button, So I changed my Text");
+        });
+      });
+
+      // second method
+
+      $(function () {
+        $("#handleHtmlReturn").click(function () {
+          alert($(".box").html());
+        });
+      });
+
+      //   Third Method
+
+      $(function () {
+        $("p").click(function () {
+          let htmlString = $(this).html();
+          $(this).text(htmlString);
+        });
+      });
+    
+    </script>
+  </body>
+</html>

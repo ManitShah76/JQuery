@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Delay</title>
+    <!-- Adding jQuery To HTMl -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS style  -->
+    <style>
+        .box{
+            background-color: crimson;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery Delay</h1>
+    <h2>Syntax</h2>
+    <pre>$(selector).delay (speed, queueName)</pre>
+    <ul>
+      <li>
+        queueName: It is also an optional parameter. It specifies the name of
+        the queue. Its default value is "fx" the standard queue effect.
+      </li>
+    </ul>
+    <hr>
+    <div class="box">Hello Dost</div>
+    <hr>
+    <button id="delay">Delay</button>
+    <script>
+        $(function(){
+            $('#delay').click(function(){
+            // $('.box').hover(function(){
+                $('.box').delay(2000).animate({marginLeft: "500px"})
+                // $('.box').css({background: "teal"})
+            })
+        })
+            $('.box').hover(function(){
+                // $('.box').css({marginLeft: "0px"})
+                $('.box').delay(2000).animate({marginLeft: "0px"})
+            })
+
+    </script>
+</body>
+</html>

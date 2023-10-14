@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Fade</title>
+     <!-- Adding jQuery To HTMl -->
+     <script
+     src="https://code.jquery.com/jquery-3.7.0.js"
+     integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+     crossorigin="anonymous"
+   ></script>
+   <style>
+    div{
+        background-color: teal;
+        color: khaki;
+        width: 200px;
+        height: 100px;
+        margin-left: 100px;
+    }
+   </style>
+  </head>
+  <body>
+    <h1>jQuery fadeIn()</h1>
+    <div class="div">Showing Effect</div>
+   
+    <pre>
+        $(selector).fadein();  
+        $(selector).fadeIn(speed,callback);   
+        $(selector).fadeIn(speed, easing, callback);  
+    </pre>
+    <pre>
+        $(selector).fadeOut();  
+        $(selector).fadeOut(speed,callback);   
+        $(selector).fadeOut(speed, easing, callback);  
+    </pre>
+    <pre>
+        $(selector).fadeToggle();  
+        $(selector).fadeToggle(speed,callback);   
+        $(selector).fadeToggle(speed, easing, callback);  
+    </pre>
+    <pre>
+        $(selector).fadeTo(speed, opacity);  
+        $(selector).fadeTo(speed, opacity, callback);   
+        $(selector).fadeTo(speed, opacity, easing, callback);  
+    </pre>
+    <hr />
+    <ul>
+      <li>
+        opacity:It specifies the opacity. The opacity value ranges between 0 and
+        1.
+      </li>
+    </ul>
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeToggle">Fade Toggle</button>
+    <button id="fadeTo">Fade To</button>
+    <script>
+        $(function(){
+            $('#fadeIn').click(function(){
+                $('.div').fadeIn(2000)
+            })
+            $('#fadeOut').click(function(){
+                $('.div').fadeOut(2000)
+            })
+            $('#fadeToggle').click(function(){
+                $('.div').fadeToggle(2000)
+            })
+            $('#fadeTo').click(function(){
+                $('.div').fadeTo(2000, 0.5)
+            })
+        })
+    </script>
+  </body>
+</html>
